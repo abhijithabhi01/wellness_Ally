@@ -3,8 +3,8 @@ import React from 'react'
 function Login() {
   return (
     <>
-    <div style={{backgroundColor:'#006666'}}>
-
+    <div  style= {{backgroundColor:'#47476b',height:'100vh', width:'100%'}}>
+     <div className='d-flex justify-content-center align-items-center'style={{backgroundColor:'white',height:'60vh',width:'40%'}}></div>
     </div>
 
     </>
