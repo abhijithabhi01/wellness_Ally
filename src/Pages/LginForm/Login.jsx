@@ -11,6 +11,7 @@ function Login() {
           <input type="text"placeholder='Username' required />
           <FaUser className='icon'/>
         </div>
+        <br />
         <div className='input-box'>
           <input type="password"placeholder='Password' required />
           <FaLock className='icon'/>
