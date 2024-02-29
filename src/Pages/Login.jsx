@@ -23,7 +23,7 @@ function Login() {
         <div className='d-flex justiy-content-center aligh-items-center mt-2 '>
     <Form className='w-75 ms-5 fw-bold' style={{marginTop:'100px',fontSize:'20px',height:'30px'}}>
      
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+      <Form.Group className="mb-3 " controlId="exampleForm.ControlInput2" style={{marginTop:'100px'}}>
         <Form.Label> Email</Form.Label>
         <Form.Control type="email" placeholder="  name@example.com"  style={{borderRadius:'20px',fontSize:'20px',height:'60px'}}/>
       </Form.Group>
