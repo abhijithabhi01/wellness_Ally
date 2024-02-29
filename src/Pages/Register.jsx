@@ -46,7 +46,6 @@ function Register() {
         </Col>
       </Row>
       </div> </div>
-
     </Container>
     </div>
   )

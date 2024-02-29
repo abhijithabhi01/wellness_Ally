@@ -2,3 +2,18 @@
   margin: 0px;
   border: 0px;
 }
+#header-h2{
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+#div-sentence{
+  font-family: "Kanit", sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+#div-p{
+  font-family: "Kdam Thmor Pro", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
