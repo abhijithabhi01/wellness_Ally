@@ -10,39 +10,41 @@ import { Link } from 'react-router-dom';
 
 function Login() {
   return (
-  
-<Container><div className='d-flex justiy-content-center aligh-items-center' style={{margin:'10%',marginLeft:'10%'}}>
+  <div className='d-flex justiy-content-center aligh-items-center '/* style={{marginTop:'100px',width:'50vw',marginLeft:'500px'}} */>
+<Container><div className='d-flex justiy-content-center aligh-items-center '  style={{marginTop:'150px',width:'65vw'}} >
 
-  <div style={{background:"#efeff5",width:'100%',borderRadius:'30px',}} >
+  <div  style={{background:"#efeff5",width:'100%'}} >
       <Row>
         <Col>
-        <img src={bg} style={{width:'100%',height:'70vh',borderRadius:'10px'}} />
+        <img src={bg} className='w-100'/>
         </Col>
+
         <Col>
-        <div className='align-items-center justify-content-center' style={{marginTop:'115px'}}>
-       <Form className='w-75 m-5'>
-       <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-        <Form.Label style={{marginLeft:'15px', fontWeight:'bolder'}}>Email Adress</Form.Label>
-        <Form.Control type="email" placeholder="Email"  style={{borderRadius:'60px', height:'50px', width:'400px'}} />
-      </Form.Group>
-
-
+        <div className='d-flex justiy-content-center aligh-items-center mt-2 '>
+    <Form className='w-75 ms-5 fw-bold' style={{marginTop:'100px',fontSize:'20px',height:'30px'}}>
+     
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-        <Form.Label style={{marginLeft:'15px', fontWeight:'bolder'}}> Password</Form.Label>
-        <Form.Control type="password" placeholder="password"  style={{borderRadius:'60px', height:'50px', width:'400px'}} />
+        <Form.Label> Email</Form.Label>
+        <Form.Control type="email" placeholder="  name@example.com"  style={{borderRadius:'20px',fontSize:'20px',height:'60px'}}/>
       </Form.Group>
-
-      <Button style={{marginLeft:'100px' ,borderRadius:"10px",fontSize:'15px',fontWeight:'bold', width:'170px'}} variant="primary" type="submit">Login</Button>{' '} <br />
-      <p   style={{marginLeft:'80px', marginTop:'20px' }}>
-        Dont'have an account? <Link style={{textDecoration:'none'}} to={'/register'}>Register</Link>
+      <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+        <Form.Label> Password</Form.Label>
+        <Form.Control type="password" placeholder="   password"  style={{borderRadius:'20px',fontSize:'20px',height:'60px'}} />
+      </Form.Group>
+      <Button className='fw-bold mt-4 w-25' style={{marginLeft:'180px',borderRadius:"10px",fontSize:'18px'}} variant="primary" type="submit">Login</Button>{' '} <br />
+      <p className='text-center mt-2'>
+        Dont have an account? <Link style={{textDecoration:'none'}} to={'/register'}>Register</Link>
       </p>
-      </Form>
+
+    </Form>
+
        </div>
         </Col>
       </Row>
       </div> </div>
 
     </Container>
+    </div>
   )
 }
 
