@@ -13,27 +13,27 @@ function Login() {
   
 <Container><div className='d-flex justiy-content-center aligh-items-center' style={{margin:'10%',marginLeft:'10%'}}>
 
-  <div style={{background:"#efeff5",width:'100%',borderRadius:'30px'}} >
+  <div style={{background:"#efeff5",width:'100%',borderRadius:'30px',}} >
       <Row>
         <Col>
-        <img src={bg} style={{width:'90%',height:'70vh',borderRadius:'10px'}} />
+        <img src={bg} style={{width:'100%',height:'70vh',borderRadius:'10px'}} />
         </Col>
         <Col>
-        <div style={{height:'50vh',width:'80%',marginTop:"100px"}}>
-       <Form >
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label> Email</Form.Label>
-        <Form.Control type="email" placeholder="name@example.com"  style={{borderRadius:'60px'}}/>
+        <div className='align-items-center justify-content-center' style={{marginTop:'115px'}}>
+       <Form className='w-75 m-5'>
+       <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
+        <Form.Label style={{marginLeft:'15px', fontWeight:'bolder'}}>Email Adress</Form.Label>
+        <Form.Control type="email" placeholder="Email"  style={{borderRadius:'60px', height:'50px', width:'400px'}} />
       </Form.Group>
 
 
       <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-        <Form.Label> Password</Form.Label>
-        <Form.Control type="password" placeholder="password"  style={{borderRadius:'60px'}} />
+        <Form.Label style={{marginLeft:'15px', fontWeight:'bolder'}}> Password</Form.Label>
+        <Form.Control type="password" placeholder="password"  style={{borderRadius:'60px', height:'50px', width:'400px'}} />
       </Form.Group>
 
-      <Button style={{marginLeft:'100px' ,borderRadius:"10px",fontSize:'15px',fontWeight:'bold'}} variant="primary" type="submit">Login</Button>{' '} <br />
-      <p   style={{marginLeft:'10%'}}>
+      <Button style={{marginLeft:'100px' ,borderRadius:"10px",fontSize:'15px',fontWeight:'bold', width:'170px'}} variant="primary" type="submit">Login</Button>{' '} <br />
+      <p   style={{marginLeft:'80px', marginTop:'20px' }}>
         Dont'have an account? <Link style={{textDecoration:'none'}} to={'/register'}>Register</Link>
       </p>
       </Form>
