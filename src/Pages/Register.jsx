@@ -10,7 +10,7 @@ import { Link } from 'react-router-dom';
 
 function Register() {
   return (
-  <div style={{margin:"120px"}}>
+  <div style={{marginTop:'7%'}}>
 <Container><div className='d-flex justiy-content-center aligh-items-center mt-5' >
 
   <div  style={{background:"#efeff5",width:'100%'}} >
