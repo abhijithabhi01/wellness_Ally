@@ -32,7 +32,7 @@ function Login() {
                   <Form.Control type="password" placeholder="password" />
                 </Form.Group>
                 <div className='d-flex justify-content-center align-items-center'>
-                                  <Button className=' fw-bold mt-4 w-50 text-center' variant="primary" type="submit">Login</Button>{' '}
+                                  <Button  className=' fw-bold mt-4 w-50 text-center' variant="primary" type="submit">Login</Button>
                                   </div>
                 <br />
                 <p className='text-center mt-2'>
