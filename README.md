@@ -18,48 +18,58 @@ import Button from 'react-bootstrap/Button';
 import { Link } from 'react-router-dom';
 
 
-function Register() {
-  return (
-  <div className='d-flex justiy-content-center aligh-items-center '/* style={{marginTop:'100px',width:'50vw',marginLeft:'500px'}} */>
-<Container><div className='d-flex justiy-content-center aligh-items-center '  style={{marginTop:'150px',width:'65vw'}} >
+ 
+    <Navbar style={{height:'11vh'}} expand="lg" className="bg-body-tertiary">
+      <Container >
+<div className='d-flex justify-content-between '>
 
-  <div  style={{background:"#efeff5",width:'100%'}} >
-      <Row>
-        <Col>
-        <img src={bg} className='w-100'/>
-        </Col>
+<div>
 
-        <Col>
-        <div className='d-flex justiy-content-center aligh-items-center mt-2 '>
-    <Form className='w-75 ms-5 fw-bold' style={{marginTop:'100px',fontSize:'20px',height:'30px'}}>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label>Username </Form.Label>
-        <Form.Control type="text" placeholder="  username"  style={{borderRadius:'20px',fontSize:'20px',height:'60px'}}/>
-      </Form.Group>
 
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-        <Form.Label> Email</Form.Label>
-        <Form.Control type="email" placeholder="  name@example.com"  style={{borderRadius:'20px',fontSize:'20px',height:'60px'}}/>
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-        <Form.Label> Password</Form.Label>
-        <Form.Control type="password" placeholder="   password"  style={{borderRadius:'20px',fontSize:'20px',height:'60px'}} />
-      </Form.Group>
-      <Button className='fw-bold mt-4 w-25' style={{marginLeft:'180px',borderRadius:"10px",fontSize:'18px'}} variant="primary" type="submit">Register </Button>{' '} <br />
-      <p className='text-center mt-2'>
-        Already have an account? <Link style={{textDecoration:'none'}} to={'/login'}>Login</Link>
-      </p>
+        <Navbar.Brand > <h2  id='header-h2' className='p-3'> Wellness + Ally</h2></Navbar.Brand>
+        
+        </div>
 
-    </Form>
+        <div>
 
-       </div>
-        </Col>
-      </Row>
-      </div> </div>
+       
+        <Navbar.Toggle aria-controls="navbarScroll" />
+        <Navbar.Collapse id="navbarScroll">
+          <Nav  className="my-2 my-lg-0 p-3 "  style={{ maxHeight: '10px',fontSize:'1px' }} navbarScroll >
+            
+            <Nav.Link   href="#action1">Home</Nav.Link>
+            {/* <Nav.Link href="#action2">Diet Plans</Nav.Link>
+            <Nav.Link href="#action2">Exercise Videos</Nav.Link>
+            <Nav.Link href="#action2">Medication Suggetion</Nav.Link> */}
+            <NavDropdown className='ms-3 ' title="Services" id="navbarScrollingDropdown">
+              <NavDropdown.Item href="#action1">Diet Plans</NavDropdown.Item>
+              <NavDropdown.Item href="#action2"> Exercise Videos</NavDropdown.Item>
+              <NavDropdown.Item href="#action3"> Medication Suggetion </NavDropdown.Item>
+              <NavDropdown.Item href="#action3"> Symptom Management </NavDropdown.Item>
+             
+              {/* <NavDropdown.Divider /> */}
+              
+              {/* <NavDropdown.Item href="#action5">
+             
+              </NavDropdown.Item> */}
+            </NavDropdown>
+            {/* <Nav.Link href="#" disabled>
+              Link
+            </Nav.Link> */}
+             {/* <Nav.Link className='ms-3' href="#action1">Contact</Nav.Link> */}
 
-    </Container>
-    </div>
-  )
-}
+          </Nav>
+          {/* <Form className="d-flex">
+            <Form.Control
+              type="search"
+              placeholder="Search"
+              className="me-2"
+              aria-label="Search"
+            />
+            <Button variant="outline-success">Search</Button>
+          </Form> */}
+        </Navbar.Collapse> </div>
+            </div>
 
-export default Register
+      </Container>
+    </Navbar>

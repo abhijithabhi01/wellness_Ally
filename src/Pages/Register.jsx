@@ -10,44 +10,45 @@ import { Link } from 'react-router-dom';
 
 function Register() {
   return (
-  <div className='d-flex justiy-content-center aligh-items-center '/* style={{marginTop:'100px',width:'50vw',marginLeft:'500px'}} */>
-<Container><div className='d-flex justiy-content-center aligh-items-center '  style={{marginTop:'150px',width:'65vw'}} >
 
-  <div  style={{background:"#efeff5",width:'100%'}} >
-      <Row>
-        <Col>
-        <img src={bg} className='w-100'/>
-        </Col>
-
-        <Col>
-        <div className='d-flex justiy-content-center aligh-items-center mt-2 '>
-    <Form className='w-75 ms-5 fw-bold' style={{marginTop:'100px',fontSize:'20px',height:'30px'}}>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
-        <Form.Label>Username </Form.Label>
-        <Form.Control type="text" placeholder="  username"  style={{borderRadius:'20px',fontSize:'20px',height:'60px'}}/>
-      </Form.Group>
-
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-        <Form.Label> Email</Form.Label>
-        <Form.Control type="email" placeholder="  name@example.com"  style={{borderRadius:'20px',fontSize:'20px',height:'60px'}}/>
-      </Form.Group>
-      <Form.Group className="mb-3" controlId="exampleForm.ControlInput2">
-        <Form.Label> Password</Form.Label>
-        <Form.Control type="password" placeholder="   password"  style={{borderRadius:'20px',fontSize:'20px',height:'60px'}} />
-      </Form.Group>
-      <Button className='fw-bold mt-4 w-25' style={{marginLeft:'180px',borderRadius:"10px",fontSize:'18px'}} variant="primary" type="submit">Register </Button>{' '} <br />
-      <p className='text-center mt-2'>
-        Already have an account? <Link style={{textDecoration:'none'}} to={'/login'}>Login</Link>
-      </p>
-
-    </Form>
-
-       </div>
-        </Col>
-      </Row>
-      </div> </div>
-    </Container>
+<div className='d-flex justify-content-center align-items-center ' style={{minHeight:'100vh'}}>
+  <Container>
+    <div className='d-flex justify-content-center align-items-center flex-column '>
+      <div style={{background:"#efeff5",width:'70%'}} className="">
+        <Row className="justify-content-center">
+          <Col xs={12} lg={6}>
+            <img src={bg} className='w-100'/>
+          </Col>
+          <Col xs={12} lg={6} className='p-5'>
+            <div className='d-flex justify-content-center align-items-center mt-2'>
+              <Form className='w-100 fw-bold'>
+                <Form.Group className=" p-3 " controlId="exampleForm.ControlInput1">
+                  <Form.Label>Username</Form.Label>
+                  <Form.Control type="text" placeholder="username" />
+                </Form.Group>
+                <Form.Group className=" p-3" controlId="exampleForm.ControlInput2">
+                  <Form.Label>Email</Form.Label>
+                  <Form.Control type="email" placeholder="name@example.com" />
+                </Form.Group>
+                <Form.Group className=" p-3" controlId="exampleForm.ControlInput3">
+                  <Form.Label>Password</Form.Label>
+                  <Form.Control type="password" placeholder="password" />
+                </Form.Group>
+                <div className='d-flex justify-content-center align-items-center'>
+                                  <Button className=' fw-bold mt-4 w-50 text-center' variant="primary" type="submit">Register</Button>{' '}
+                                  </div>
+                <br />
+                <p className='text-center mt-2'>
+                  Already have an account? <Link style={{textDecoration:'none'}} to={'/login'}>Login</Link>
+                </p>
+              </Form>
+            </div>
+          </Col>
+        </Row>
+      </div>
     </div>
+  </Container>
+</div>
   )
 }
 

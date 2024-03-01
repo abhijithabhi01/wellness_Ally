@@ -18,6 +18,7 @@ import cd1 from '../assets/cd1.jpeg';
 import cd2 from '../assets/cd2.jpeg';
 import cd3 from '../assets/cd3.jpeg';
 import cd4 from '../assets/cd4.jpeg';
+import Footer from '../Components/Footer';
 
 
 
@@ -160,6 +161,9 @@ function Home() {
                 </div>
 
             </div>
+           
+           
+            <Footer /> 
         </>
     )
 }
