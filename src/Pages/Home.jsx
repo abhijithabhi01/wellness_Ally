@@ -62,7 +62,6 @@ function Home() {
 
                         <Row>
                             <Col>
-
                                 <Card sx={{ maxWidth: 345 }}>
                                     <CardMedia
                                         component="img"
@@ -84,8 +83,6 @@ function Home() {
                                     </CardActions>
                                 </Card>
                             </Col>
-
-
 
                             <Col>
                                 <Card sx={{ maxWidth: 345 }}>
@@ -110,8 +107,6 @@ function Home() {
                                 </Card>
                             </Col>
 
-
-
                             <Col>
                                 <Card sx={{ maxWidth: 345 }}>
                                     <CardMedia
@@ -134,6 +129,7 @@ function Home() {
                                     </CardActions>
                                 </Card>
                             </Col>
+
                             <Col>
 
                                 <Card sx={{ maxWidth: 345 }}>
@@ -159,7 +155,6 @@ function Home() {
                                 </Card>
                             </Col>
                         </Row>
-
                     </Container>
 
                 </div>
