@@ -27,19 +27,20 @@ function Home() {
 
         <>
             <Header />
+
             <div>
                 <div className='w-100'>
                     <Carousel>
-                        <Carousel.Item interval={1000}>
+                        <Carousel.Item interval={2000}>
                             {/* <ExampleCarouselImage text="First slide" /> */}
                             <img src={c1} alt="" style={{ height: '50vh', width: '100%' }} />
 
                         </Carousel.Item>
-                        <Carousel.Item interval={500}>
+                        <Carousel.Item interval={2000}>
                             {/* <ExampleCarouselImage text="Second slide" /> */}
                             <img src={c2} alt="" style={{ height: '50vh', width: '100%' }} />
                         </Carousel.Item>
-                        <Carousel.Item>
+                        <Carousel.Item interval={2000}>
                             {/* <ExampleCarouselImage text="Third slide" /> */}
                             <img src={c3} alt="" style={{ height: '50vh', width: '100%' }} />
 

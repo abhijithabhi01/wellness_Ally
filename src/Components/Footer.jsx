@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
@@ -13,7 +14,7 @@ function Footer() {
 
                         <div className="row">
                             <div className="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                                <h6 className="text-uppercase mb-4 font-weight-bold">Company name</h6>
+                                <h6 className="text-uppercase mb-4 font-weight-bolder">Wellness Ally</h6>
                                 <p>
                                     Here you can use rows and columns to organize your footer content. Lorem ipsum dolor sit amet,
                                     consectetur adipisicing elit.
@@ -25,18 +26,18 @@ function Footer() {
 
                             {/* Grid column */}
                             <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-                                <h6 className="text-uppercase mb-4 font-weight-bold">Products</h6>
+                                <h6 className="text-uppercase mb-4 font-weight-bolder">Services</h6>
                                 <p>
-                                    <a className="text-white">MDBootstrap</a>
+                                    < Link className="text-white"  style={{textDecoration:'none',fontSize:'13px'}}>Medication suggestion </Link>
                                 </p>
                                 <p>
-                                    <a className="text-white">MDWordPress</a>
+                                    <Link className="text-white"  style={{textDecoration:'none',fontSize:'13px'}}>Symptom Management</Link>
                                 </p>
                                 <p>
-                                    <a className="text-white">BrandFlow</a>
+                                    <Link className="text-white"  style={{textDecoration:'none',fontSize:'13px'}}>Exercise Videos</Link>
                                 </p>
                                 <p>
-                                    <a className="text-white">Bootstrap Angular</a>
+                                    <Link className="text-white"  style={{textDecoration:'none',fontSize:'13px'}}>Diet Plans</Link>
                                 </p>
                             </div>
                             {/* Grid column */}

@@ -1,34 +1,28 @@
 import React from 'react'
-import { Navbar, Container, Nav } from 'react-bootstrap';
-
+import Container from 'react-bootstrap/Container';
+import Navbar from 'react-bootstrap/Navbar';
+import { Link } from 'react-router-dom';
+import logo from '../assets/logo.png'
 
 
 function Header() {
   return (
     <>
-   
-   <Navbar bg="light" expand="lg" fixed="top">
+<Navbar className="bg-body-tertiary">
       <Container>
-        <Navbar.Brand href="#">Start Bootstrap</Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbarResponsive" />
-        <Navbar.Collapse id="navbarResponsive">
-          <Nav className="ms-auto">
-            <Nav.Item className="nav-item">
-              <Nav.Link href="#" className="nav-link">Home</Nav.Link>
-            </Nav.Item>
-            <Nav.Item className="nav-item">
-              <Nav.Link href="#" className="nav-link">About</Nav.Link>
-            </Nav.Item>
-            <Nav.Item className="nav-item">
-              <Nav.Link href="#" className="nav-link">Services</Nav.Link>
-            </Nav.Item>
-            <Nav.Item className="nav-item">
-              <Nav.Link href="#" className="nav-link">Contact</Nav.Link>
-            </Nav.Item>
-          </Nav>
+
+        <Navbar.Brand href="#home"  style={{fontFamily:'monospace',fontWeight:'bold', fontSize:'25px'}}> <img src={logo}  style={{width:'9%',marginRight:'15px'}} alt="" />Wellness + Ally</Navbar.Brand>
+        <Navbar.Toggle />
+        <Navbar.Collapse className="justify-content-end"> 
+          <Navbar.Text>
+           <Link style={{textDecoration:'none',fontSize:'15px'}} className='fa-large'>Home </Link> 
+           <Link style={{textDecoration:'none',fontSize:'15px'}} className='ms-2'>Contact </Link>
+           <Link style={{textDecoration:'none',fontSize:'15px'}} className='ms-2'>Service </Link>
+          </Navbar.Text>
         </Navbar.Collapse>
-      </Container>
+      </Container>  
     </Navbar>
+  
     </>
   )
 }

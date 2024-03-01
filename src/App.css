@@ -1,13 +1,15 @@
 *{
   margin: 0px;
   border: 0px;
+  box-sizing: border-box;
+  overflow-x: hidden;
 }
-#header-h2{
+#p1-header{
   /* in header Component */
   font-family: "Poppins", sans-serif;
   font-weight: 500;
   font-style: normal;
-  font-size: xx-large;
+  font-size: '20px';
 
 }
 #div-sentence{
