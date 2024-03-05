@@ -7,7 +7,8 @@ import Col from 'react-bootstrap/Col';
 import diet from '../assets/diet.png'
 import medic from '../assets/medi.jpg'
 import exer from '../assets/ex.jpg'
-import { Button, Card } from 'react-bootstrap';
+import { /* Button, */ Card } from 'react-bootstrap';
+import Footer from '../Components/Footer'
 
 function Bp() {
     return (
@@ -113,7 +114,7 @@ function Bp() {
       
       </Container>
                     </div>
-                <div>
+                    <div style={{ marginLeft: '90px', marginRight: '80px', marginTop: '80px' }}>
                 <h1 style={{ fontWeight: 'bolder', fontFamily: 'monospace', fontSize: '50px'}} className=' mb-5'>Exersice Videos</h1>
                 </div>
                 <div>
@@ -129,6 +130,7 @@ function Bp() {
     </Card>
                 </div>
             </div>
+            <Footer/>
         </>
     )
 }

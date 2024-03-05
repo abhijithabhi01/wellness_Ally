@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Form from 'react-bootstrap/Form';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -9,6 +9,13 @@ import { Link } from 'react-router-dom';
 
 
 function Login() {
+
+
+  const[phone, setPhone] = useState("");
+  const [password, setPassword] = useState("")
+
+
+
   return (
 
 <div className='d-flex justify-content-center align-items-center ' style={{minHeight:'100vh'}}>
@@ -21,15 +28,19 @@ function Login() {
           </Col>
           <Col xs={12} lg={6} className='p-5'>
             <div className='d-flex justify-content-center align-items-center mt-2'>
-              <Form className='w-100 fw-bold'>
+              <Form className='w-100 fw-bold' onSubmit={handleLogin}>
                
                 <Form.Group className=" p-3" controlId="exampleForm.ControlInput2">
-                  <Form.Label>Email</Form.Label>
-                  <Form.Control type="email" placeholder="name@example.com" />
+                  <Form.Label>Mobile number</Form.Label>
+                  <Form.Control type="number" placeholder="enter your number" 
+                  value={ phone} 
+                  onChange={(e) =>  setPhone(e.target.value)} />
                 </Form.Group>
                 <Form.Group className=" p-3" controlId="exampleForm.ControlInput3">
                   <Form.Label>Password</Form.Label>
-                  <Form.Control type="password" placeholder="password" />
+                  <Form.Control type="password" placeholder="password"
+                    value={ password} 
+                    onChange={(e) =>  setPassword(e.target.value)}  />
                 </Form.Group>
                 <div className='d-flex justify-content-center align-items-center'>
                                   <Button  className=' fw-bold mt-4 w-50 text-center' variant="primary" type="submit">Login</Button>
