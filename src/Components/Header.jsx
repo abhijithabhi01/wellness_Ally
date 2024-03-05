@@ -8,7 +8,7 @@ import logo from '../assets/logo.png'
 function Header() {
   return (
     <>
-<Navbar className="bg-body-tertiary">
+<Navbar className="bg-body-secondary" >
       <Container>
 
         <Navbar.Brand href="#home"  style={{fontFamily:'monospace',fontWeight:'bold', fontSize:'25px'}}> <img src={logo}  style={{width:'9%',marginRight:'15px'}} alt="" />Wellness + Ally</Navbar.Brand>

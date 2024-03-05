@@ -6,7 +6,7 @@ function Footer() {
         <>
 
             <div />
-            <footer className="text-center text-lg-start text-white" style={{ backgroundColor: '#929fba' }}>
+            <footer className="text-center text-lg-start text-white" style={{ backgroundColor: '#929fba',marginTop:'20px' }}>
 
                 <div className="container p-4 pb-0">
 
@@ -51,7 +51,7 @@ function Footer() {
                                     <i className="fas fa-home mr-3"></i> New York, NY 10012, US
                                 </p>
                                 <p>
-                                    <i className="fas fa-envelope mr-3"></i> info@gmail.com
+                                    <i className="fas fa-envelope mr-3"></i> wellnessally@gmail.com
                                 </p>
                                 <p>
                                     <i className="fas fa-phone mr-3"></i> + 01 234 567 88
@@ -134,7 +134,7 @@ function Footer() {
 
                 {/* Copyright */}
                 <div className="text-center p-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-                    © 2020 Copyright: <a className="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+                    © 2024 Copyright: <a className="text-white">WellnessAlly.com</a>
                 </div>
                 {/* Copyright */}
             </footer>

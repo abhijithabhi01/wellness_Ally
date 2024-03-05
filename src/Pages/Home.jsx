@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from '../Components/Header'
 import Carousel from 'react-bootstrap/Carousel';
-// import ExampleCarouselImage from 'components/ExampleCarouselImage';
 import c1 from '../assets/c1.jpeg';
 import c2 from '../assets/c33.jpeg';
 import c3 from '../assets/c3.jpeg';
@@ -28,8 +27,8 @@ function Home() {
         <>
             <Header />
 
-            <div>
-                <div className='w-100'>
+            <div  >
+                <div className='w-100 mb-5'>
                     <Carousel>
                         <Carousel.Item interval={2000}>
                             {/* <ExampleCarouselImage text="First slide" /> */}
@@ -64,7 +63,7 @@ function Home() {
 
                         <Row>
                             <Col>
-                                <Card sx={{ maxWidth: 345 }}>
+                                <Card className='mb-2' sx={{ maxWidth: 345 }}>
                                     <CardMedia
                                         component="img"
                                         alt="green iguana"
@@ -72,8 +71,8 @@ function Home() {
                                         image={cd1}
                                     />
                                     <CardContent>
-                                        <Typography gutterBottom variant="h5" component="div">
-                                            Medication suggestion 
+                                        <Typography gutterBottom  variant="h5" component="div">
+                                            Sugar
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary">
                                             Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -96,7 +95,7 @@ function Home() {
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">
-                                            Symptom Management
+                                        Blood Presure
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary">
                                             Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -119,7 +118,7 @@ function Home() {
                                     />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">
-                                            Exercise Videos
+                                    Over Weight
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary">
                                             Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -133,17 +132,16 @@ function Home() {
                             </Col>
 
                             <Col>
-
                                 <Card sx={{ maxWidth: 345 }}>
                                     <CardMedia
                                         component="img"
                                         alt="green iguana"
                                         height="140"
                                         image={cd4}
-                                    />
+                                        />
                                     <CardContent>
                                         <Typography gutterBottom variant="h5" component="div">
-                                            Diet Plans
+                                        Cholesterol
                                         </Typography>
                                         <Typography variant="body2" color="text.secondary">
                                             Lizards are a widespread group of squamate reptiles, with over 6,000
@@ -152,18 +150,13 @@ function Home() {
                                     </CardContent>
                                     <CardActions>
                                         <Button size="small">Read More</Button>
-                                     
                                     </CardActions>
                                 </Card>
                             </Col>
                         </Row>
                     </Container>
-
                 </div>
-
             </div>
-           
-           
             <Footer /> 
         </>
     )

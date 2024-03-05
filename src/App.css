@@ -22,3 +22,16 @@
   font-weight: 400;
   font-style: normal;
 }
+.navbar{
+  overflow: hidden;
+  position: fixed;
+  top: 0%;
+}
+.a{
+  list-style-type: circle;
+}
+li{
+  font-family: monospace;
+   font-weight:bold;
+    font-size:16px;
+}
