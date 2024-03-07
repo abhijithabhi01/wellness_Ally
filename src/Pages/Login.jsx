@@ -5,7 +5,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import bg from '../assets/yoga.jpg'
 import Button from 'react-bootstrap/Button';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+
 
 
 function Login() {
@@ -13,8 +15,30 @@ function Login() {
 
   const[phone, setPhone] = useState("");
   const [password, setPassword] = useState("")
+  const [error, setError] = useState("");
+  const [successMessage, setSuccessMessage] = useState("");
+  const  navigate = useNavigate()
 
-
+  const  handleLogin = async (e) =>{
+    e.preventDefault();
+    console.log(phone,  password);
+    if ( !phone || !password ) {
+      setError('Please fill in all fields.');
+      return;
+    }
+    try {
+      const response = await axios.post('http://localhost:8000/api/v1/login/', {  phone, password});
+      console.log(response.data.data.token.access );
+       const token =  localStorage.setItem( "token", response.data.data.token.access );
+     
+      setSuccessMessage('Login successful!');
+      navigate('/home')
+      console.log(response);
+    } catch (err) {
+      setError('Login failed. Please try again.');
+      console.log(err);
+    }
+  };
 
   return (
 
@@ -45,9 +69,12 @@ function Login() {
                 <div className='d-flex justify-content-center align-items-center'>
                                   <Button  className=' fw-bold mt-4 w-50 text-center' variant="primary" type="submit">Login</Button>
                                   </div>
+                                  {error && <p className="text-danger text-center mt-2">{error}</p>}
+                    {successMessage && <p className="text-success text-center mt-2">{successMessage}</p>}
+                  
                 <br />
                 <p className='text-center mt-2'>
-                  Don't have an account? <Link style={{textDecoration:'none'}} to={'/Register'}>Register</Link>
+                  Don't have an account? <Link style={{textDecoration:'none'}} to={'/Register/$'}>Register</Link>
                 </p>
               </Form>
             </div>

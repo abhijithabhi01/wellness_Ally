@@ -35,6 +35,7 @@ const [dob, setDob] = useState('');
     try {
       const response = await axios.post('http://localhost:8000/api/v1/register/', { full_name, phone, password, dob, gender });
       console.log(response);
+      
       setSuccessMessage('Registration successful!');
       navigate('/login')
       console.log(response);
