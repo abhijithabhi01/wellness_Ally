@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 function HealthProfile() {
     const currentUrl = window.location.href;
     const url = currentUrl;
+    const API_URL = import.meta.env.VITE_APP_API_URL;
     const parts = url.split('/');
     const id = parts[parts.length - 1];
 
@@ -20,7 +21,7 @@ function HealthProfile() {
 
     async function healthData() {
         try {
-            const response = await axios.get(`http://localhost:8000/api/v1/health-profiles/${id}`);
+            const response = await axios.get(`${API_URL}/api/v1/health-profiles/${id}/`);
             setHealthProfiles(response.data.data);
         //   setHeading(response.data.data)
         //   console.log(response.data.data);
@@ -30,7 +31,7 @@ function HealthProfile() {
     }
 
   
-    const imgUrl =" http://localhost:8000/"
+ 
     return (
         <>
             <div style={{ height: '90vh' }}>
@@ -39,9 +40,9 @@ function HealthProfile() {
                 <Row className="m-5">
                     {healthProfiles.map((profile) => (
                         <div style={{width:'350px'}} key={profile.id}> 
-                        <Link to={`/health-issue/${profile.issue.id}`} style={{textDecoration:'none'}}>
+                        <Link to={`/health-issue/${profile.id}`} style={{textDecoration:'none'}}>
                             <Card   className='mt-5'  style={{ width: '25rem' }}>
-                                <Card.Img variant="top" src={`${imgUrl}${profile.issue.image} `}/>
+                                <Card.Img variant="top" src={`${API_URL}${profile.image} `}/>
                                 <Card.Body>
                                     <Card.Title className='fw-bold fs-4'>{profile.issue.issue}</Card.Title>
                                     <Card.Text className='text-danger  fs-5  fw-bolder'>

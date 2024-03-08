@@ -18,6 +18,9 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 
 function Home() {
+    
+const API_URL = import.meta.env.VITE_APP_API_URL;
+console.log("URL",API_URL)
     const [healthIssues, setHealthIssues] = useState([]);
     useEffect(() => {
 
@@ -26,7 +29,7 @@ function Home() {
 
     async function fetchData() {
         try {
-            const response = await axios.get('http://localhost:8000/api/v1/health_issue/list/');
+            const response = await axios.get(`${API_URL}/api/v1/health_issue/list/`);
             setHealthIssues(response.data.data);
             console.log(response.data.data);
         } catch (error) {
@@ -34,7 +37,6 @@ function Home() {
         }
     }
 
-    const url = "http://localhost:8000/";
     return (
         <>
             <Header />
@@ -72,7 +74,7 @@ function Home() {
                                             component="img"
                                             alt="health issue"
                                             height="140"
-                                            image={`${url}${prob.image}`} // Make sure your API response has an 'image' field
+                                            image={`${API_URL}${prob.image}`} // Make sure your API response has an 'image' field
                                         />
                                         <CardContent>
                                             <Typography gutterBottom variant="h5" component="div">
