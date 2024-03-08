@@ -3,6 +3,7 @@ import Header from '../Components/Header';
 import { Card, Col, Row } from 'react-bootstrap';
 import Footer from '../Components/Footer';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 function HealthProfile() {
     const currentUrl = window.location.href;
@@ -21,8 +22,8 @@ function HealthProfile() {
         try {
             const response = await axios.get(`http://localhost:8000/api/v1/health-profiles/${id}`);
             setHealthProfiles(response.data.data);
-          setHeading(response.data.data)
-          console.log();
+        //   setHeading(response.data.data)
+        //   console.log(response.data.data);
         } catch (error) {
             console.error('Error fetching data:', error);
         }
@@ -38,10 +39,10 @@ function HealthProfile() {
                 <Row className="m-5">
                     {healthProfiles.map((profile) => (
                         <div style={{width:'350px'}} key={profile.id}> 
-                            <Card /* onClick={handleShowLevel} */ className='mt-5'  style={{ width: '25rem' }}>
+                        <Link to={`/health-issue/${profile.issue.id}`} style={{textDecoration:'none'}}>
+                            <Card   className='mt-5'  style={{ width: '25rem' }}>
                                 <Card.Img variant="top" src={`${imgUrl}${profile.issue.image} `}/>
                                 <Card.Body>
-                                  
                                     <Card.Title className='fw-bold fs-4'>{profile.issue.issue}</Card.Title>
                                     <Card.Text className='text-danger  fs-5  fw-bolder'>
                                        {profile.condition.name}
@@ -51,6 +52,7 @@ function HealthProfile() {
                                     </Card.Text>
                                 </Card.Body>
                             </Card>
+                            </Link>
                         </div>
                     ))}
                 </Row>
