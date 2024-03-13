@@ -10,6 +10,7 @@ import Symptoms from './Pages/Symptoms';
 import Exercise from './Pages/Exersice';
 import Diet from './Pages/Diet';
 import Products from './Pages/Products/Products';
+import ProductsList from './Pages/Products/ProductsList';
 
 function App() {
   console.log(import.meta.env);
@@ -19,7 +20,7 @@ console.log(url);
     <>
 
     <Routes>
-    <Route path='/'element={<Home/>}/>
+    <Route path='/'element={<Login/>}/>
       <Route path='/login'element={<Login/>}/>
       <Route path='/register'element={<Register/>}/>
       <Route path='/heath-profile/:id'element={<HealthProfile/>}/>
@@ -28,6 +29,7 @@ console.log(url);
       <Route path='/health-issue/Exercise'element={<Exercise/>}/>
       <Route path='/health-issue/Diet'element={<Diet/>}/>
       <Route path='/health-issue/Products'element={<Products/>}/>
+      <Route path='/health-issue/Products-list'element={<ProductsList/>}/>
       <Route path='/*'element={<Home/>}/>
 
       </Routes>

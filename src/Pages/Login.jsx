@@ -12,7 +12,7 @@ import axios from 'axios';
 
 function Login() {
 
-
+  const API_URL = import.meta.env.VITE_APP_API_URL;
   const[phone, setPhone] = useState("");
   const [password, setPassword] = useState("")
   const [error, setError] = useState("");
@@ -27,7 +27,7 @@ function Login() {
       return;
     }
     try {
-      const response = await axios.post('http://localhost:8000/api/v1/login/', {  phone, password});
+      const response = await axios.post(`${API_URL}/api/v1/login/`, {  phone, password});
       console.log(response.data.data.token.access );
        const token =  localStorage.setItem( "token", response.data.data.token.access );
      
@@ -74,7 +74,7 @@ function Login() {
                   
                 <br />
                 <p className='text-center mt-2'>
-                  Don't have an account? <Link style={{textDecoration:'none'}} to={'/Register/$'}>Register</Link>
+                  Don't have an account? <Link style={{textDecoration:'none'}} to={'/register'}>Register</Link>
                 </p>
               </Form>
             </div>

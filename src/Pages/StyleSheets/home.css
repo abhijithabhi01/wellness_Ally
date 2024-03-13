@@ -1,0 +1,16 @@
+/* Add this CSS to your global stylesheet or a separate file */
+.hide-scrollbar {
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: transparent transparent; /* Firefox */
+    overflow: -moz-scrollbars-none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    width: 0.5rem; /* Safari/Chrome/Opera */
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar-thumb {
+    background-color: transparent; /* Safari/Chrome/Opera */
+  }
+  

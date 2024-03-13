@@ -7,6 +7,7 @@
   .symptom-card {
     display: flex;
     min-height: 40vh;
+    max-height: 40vh;
     width: 80%;
     margin: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -20,7 +21,7 @@
   .s-image {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Adjust this property based on your preference */
+    object-fit: cover;  
   }
   
   .symptom-content {
@@ -31,3 +32,24 @@
     justify-content: space-between;
   }
   
+
+h1::-webkit-scrollbar {
+  width: 0.5rem; 
+}
+
+
+/* Add this CSS to your global stylesheet or a separate file */
+.hide-scrollbar {
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: transparent transparent; /* Firefox */
+  overflow: -moz-scrollbars-none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  width: 0.5rem; /* Safari/Chrome/Opera */
+}
+
+.hide-scrollbar::-webkit-scrollbar-thumb {
+  background-color: transparent; /* Safari/Chrome/Opera */
+}

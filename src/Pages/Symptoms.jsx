@@ -31,6 +31,10 @@ function Symptoms() {
   return (
     <>
       <Header />
+      <div className="text-center mb-4 mt-4">
+                <h1>Symptoms</h1>
+            </div>
+
       <div className="symptoms-container">
         {data.map((symptom) => (
           <div key={symptom.id} className="symptom-card">
