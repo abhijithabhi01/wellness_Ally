@@ -42,14 +42,14 @@ function Exercise() {
 
   return (
     <>
-      <Header />
+      <Header />  
       <div className="text-center mb-4 mt-4">
         <h1>Exercise</h1>
       </div>
 
       <div className="symptoms-container">
         {data.map((symptom) => (
-          <div key={symptom.id} className="symptom-card">
+          <div key={symptom.id} className="symptom-card hide-scrollbar">
             <div className="symptom-image">
               {symptom.image && (
                 <img src={API_URL + symptom.image} alt={symptom.name} className="s-image" />

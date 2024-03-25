@@ -36,7 +36,7 @@ function Diet() {
       </div>
       <div className="symptoms-container">
         {data.map((symptom) => (
-          <div key={symptom.id} className="symptom-card">
+          <div key={symptom.id} className="symptom-card hide-scrollbar">
             <div className="symptom-image">
               <img
                 src={API_URL + symptom.image}

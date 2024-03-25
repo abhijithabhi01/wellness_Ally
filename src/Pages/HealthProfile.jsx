@@ -34,7 +34,7 @@ function HealthProfile() {
     <>
       <div style={{ minHeight: "100vh", overflow: "hidden" }}>
         <Header />
-        <div className="text-center mt-4">
+        <div className="text-center mt-4 ">
           <h2>Health Profiles</h2>
         </div>
 
@@ -45,7 +45,7 @@ function HealthProfile() {
                 to={`/health-issue/${profile.id}`}
                 style={{ textDecoration: "none" }}
               >
-                <Card className="mt-5" style={{ width: "18rem" }}>
+                <Card className="mt-5 hide-scrollbar" style={{ width: "18rem" }}>
                   <Card.Img
                     variant="top"
                     style={{ height: "200px", objectFit: "cover" }}

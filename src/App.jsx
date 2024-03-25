@@ -11,6 +11,7 @@ import Exercise from './Pages/Exersice';
 import Diet from './Pages/Diet';
 import Products from './Pages/Products/Products';
 import ProductsList from './Pages/Products/ProductsList';
+import Payment from './Pages/Products/Payment';
 
 function App() {
   console.log(import.meta.env);
@@ -30,6 +31,7 @@ console.log(url);
       <Route path='/health-issue/Diet'element={<Diet/>}/>
       <Route path='/health-issue/Products'element={<Products/>}/>
       <Route path='/health-issue/Products-list'element={<ProductsList/>}/>
+      <Route path='/checkout' element={<Payment/>}/>
       <Route path='/*'element={<Home/>}/>
 
       </Routes>
