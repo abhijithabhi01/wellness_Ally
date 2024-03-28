@@ -17,8 +17,18 @@ import Footer from "../Components/Footer";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./StyleSheets/home.css";
+import Modal from 'react-bootstrap/Modal';
+import Tab from 'react-bootstrap/Tab';
+import Tabs from 'react-bootstrap/Tabs';
+import CommunityChat from "./CommunityChat";
+import DocChat from "./DocChat";
 
 function Home() {
+  // modal
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const API_URL = import.meta.env.VITE_APP_API_URL;
   console.log("URL", API_URL);
   const [healthIssues, setHealthIssues] = useState([]);
@@ -106,7 +116,53 @@ function Home() {
                     </Row>
                 </Container>
             </div>
+           
             <Footer />
+            <div style={{position:'fixed',margin:'-62% 0px 0px 0px', zIndex:'10',right:'0'}}>
+    <img src="https://play-lh.googleusercontent.com/c5HiVEILwq4DqYILPwcDUhRCxId_R53HqV_6rwgJPC0j44IaVlvwASCi23vGQh5G3LIZ" alt="" 
+    style={{height:'60px', width:'60px',borderRadius:'50%'}} 
+    onClick={handleShow}
+    />
+</div>
+
+
+
+
+
+{/* modal */}
+<Modal
+        show={show}
+        onHide={handleClose}
+        backdrop="static"
+        keyboard={false}
+     size="lg"
+      >
+  <div  
+          
+          >
+              <Modal.Header closeButton>
+         <h4 style={{color:'white',height:'35px'}}>Connecting People</h4>
+          </Modal.Header>
+          <Tabs
+         
+        defaultActiveKey="home"
+        id="uncontrolled-tab-example"
+       style={{height:'80px'}}
+      >
+        <Tab eventKey="home" title="Community Chat">
+        <CommunityChat/>
+        </Tab>
+        <Tab eventKey="tlktodoc" title="Talk To Doctor">
+         <DocChat/>
+        </Tab>
+      
+      </Tabs>
+  
+  </div>
+
+
+      </Modal>
+      
         </>
     );
 }

@@ -32,9 +32,15 @@ function Products() {
       console.error("Error fetching data:", error);
     }
   }
+console.log(data);
 
   const handleBuyNow = (id) => {
-    navigate(`/checkout/?id=${id}`);
+if(data){
+  navigate(`/checkout/?id=${id}`,{state:{data}});
+}
+else{
+  console.log(`data not avaliable now`);
+}
   };
 
   return (
