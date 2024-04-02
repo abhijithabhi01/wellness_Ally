@@ -16,7 +16,7 @@ function DocChat() {
             setExistingUser(JSON.parse(sessionStorage.getItem('existinguser')));
         }
     }, []);
-//console.log(takeInput);
+
     // send chat
     const handleSubmit = async () => {
         const { message } = takeInput;
@@ -66,11 +66,12 @@ function DocChat() {
         }
     };
 
-    if(handleSubmit){
-        useEffect(() => {
-            ListChat(); // Call ListChat when component mounts
-        }, []);
-    }
+    // if(handleSubmit){
+    //     useEffect(() => {
+    //         ListChat(); // Call ListChat when component mounts
+    //     }, [ha]);
+    // }
+    ListChat();
 console.log(listChat);
   return (
     <>
@@ -85,10 +86,17 @@ console.log(listChat);
                 </div>
                 <div className="messages-area" style={{ backgroundColor: '#343541', width: '100%', height: '500px', overflow: 'scroll', scrollbarWidth: 'none' }}>
                     {listChat.map((message, index) => (
-                        <div key={index} className={`message ${index % 2 === 0 ? 'one' : 'two'}`} style={{ width: '100%', height: '60px', backgroundColor: index % 2 === 0 ? '#2E2F3A' : '#343541' }}>
-                            <img src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="no image" style={{ height: '35px', width: '35px', borderRadius: '50%', margin: '10px' }} />
-                            {message.sender}: {message.message}
-                        </div>
+                       <>
+                            <div key={index} className={`message ${index % 2 === 0 ? 'one' : 'two'}`} style={{ width: '100%', height: '60px', backgroundColor: index % 2 === 0 ? '#2E2F3A' : '#343541' }}>
+                                <img src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="no image" style={{ height: '35px', width: '35px', borderRadius: '50%', margin: '10px' }} />
+                                {message.sender}: {message.message}
+                            </div>
+                             <div key={index} className={`message ${index % 2 === 0 ? 'one' : 'two'}`} style={{ width: '100%', height: '60px', backgroundColor: index % 2 === 0 ? '#2E2F3A' : '#343541' }}>
+                             <img src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="no image" style={{ height: '35px', width: '35px', borderRadius: '50%', margin: '10px' }} />
+                             Doctor: {message.replay}
+                            
+                         </div>
+                       </>
                     ))}
                 </div>
                 <div className="sender-area" style={{ backgroundColor: '#343541', width: '100%', height: '90px', display: 'flex', borderRadius: '8px', marginBottom: '10px',padding:'0px 10px' }}>
