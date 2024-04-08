@@ -92,8 +92,12 @@ console.log(listChat);
                                 {message.sender}: {message.message}
                             </div>
                              <div key={index} className={`message ${index % 2 === 0 ? 'one' : 'two'}`} style={{ width: '100%', height: '60px', backgroundColor: index % 2 === 0 ? '#2E2F3A' : '#343541' }}>
-                             <img src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="no image" style={{ height: '35px', width: '35px', borderRadius: '50%', margin: '10px' }} />
+                           {message.replay && 
+                           <>
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/005/545/335/small/user-sign-icon-person-symbol-human-avatar-isolated-on-white-backogrund-vector.jpg" alt="no image" style={{ height: '35px', width: '35px', borderRadius: '50%', margin: '10px' }} />
                              Doctor: {message.replay}
+                           </>
+                             }
                             
                          </div>
                        </>
